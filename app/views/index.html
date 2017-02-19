@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Audio Stream</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Realtime streaming audio with nodejs">
+    <meta name="keywords" content="audio,stream,js,realtime">
+    <link href="lib/css/materialize.min.css" rel="stylesheet">
+    <link href="lib/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <script src="lib/js/angular.min.js"></script>
+</head>
+<body ng-app="gaudio">
+    <div class="container" ng-controller="mediaController as media">
+        <h1>Audio Streaming</h1>
+        <div class="ga-capture-controls row">
+            <div class="col s6 l2">
+                <button ng-click="media.startCapture()" class="btn-floating btn-large waves-effect waves-light light-green darken-2"><i class="fa fa-play"></i></button>
+            </div>
+            <div class="col s6 l2">
+                <button ng-click="media.stopCapture()" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="fa fa-stop"></i></button>
+            </div>
+            <div class="ga-status z-depth-3 blue darken-3 col s12 l8"><p class="">{{info.status}}</p></div>
+        </div>
+    </div>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/materialize.min.js"></script>
+    <script src="js/media.min.js"></script>
+</body>
+</html>

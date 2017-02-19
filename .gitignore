@@ -5,4 +5,4 @@ app/libdev
 node_modules/
 app/dist
 app/lib
-*.log
+npm-debug.log.*
